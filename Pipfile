@@ -1,12 +1,14 @@
 [[source]]
-url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
-
-[packages]
-django = "==2.1.*"
-
-[dev-packages]
+url = "https://pypi.org/simple"
 
 [requires]
 python_version = "3.6"
+
+[dev-packages]
+
+[packages]
+django = "*"
+psycopg2 = "*"
+psycopg2-binary = "*"
