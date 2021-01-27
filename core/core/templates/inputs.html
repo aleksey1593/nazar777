@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<form action="{% url 'send' %}" method="post">
+  {% csrf_token %}
+{% for i in number %}
+  <label for="name {{ i }}">Name{{ i }}:</label><br>
+  <input type="text" id="name {{ i }}" name="name{{ i }}"><br>
+{% endfor %}
+  <input type="submit" value="Send">
+</form>
+<form action="{% url 'add' %}" method="post">
+    {% csrf_token %}
+    <input name="number" type="hidden" value="{{ add_number }}">
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>
